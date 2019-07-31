@@ -1,0 +1,30 @@
+.c-btn-circle-flat{
+  display: inline-block;
+  text-decoration: none;
+  background: #87befd;
+  color: #FFF;
+  width:60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  transition: .4s;
+}
+.c-btn-circle-flat:hover {
+  cursor: pointer;
+}
+.c-btn-circle-flat---facebook{
+  display: inline-block;
+  text-decoration: none;
+  background: #1b3667;
+  color: #FFF;
+  width:60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  transition: .4s;
+  &:hover{
+    cursor: pointer;
+  }
+}

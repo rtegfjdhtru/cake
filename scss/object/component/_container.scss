@@ -1,0 +1,44 @@
+.c-container {
+  overflow: hidden;
+  text-align: center;
+
+  &__menu--left {
+    display: flex;
+    flex-direction: row;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  &__menu--right {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 15px;
+    padding-left: 15px;
+    position: relative;
+    float: right;
+  }
+}
+
+.text-container {
+  text-align: left;
+  margin-left: $space_xl;
+  margin-right: $space_xl;
+
+}
+
+.p-info__container {
+  background: #775d51; //todo 仮
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+
+  &--text {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: 150px;
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+}

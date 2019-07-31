@@ -1,0 +1,23 @@
+.first{
+  text-align: center;
+  padding-right: $space_xxl;
+  padding-left: $space_xxl;
+  &__img--container{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+
+  }
+}
+.second{
+  color: $main-color;
+  width: $container-width;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+ //text-align: center;
+}
+.third{
+
+margin: 0 auto;
+}

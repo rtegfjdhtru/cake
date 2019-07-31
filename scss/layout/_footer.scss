@@ -1,0 +1,15 @@
+.footer{
+  overflow: hidden;
+text-align: center;
+  margin: 0 auto;
+  background: #775d51;//todo  仮
+  position: relative;
+  &__text{
+
+  }
+  &__button--container{
+    position: absolute;
+    top: 120px;
+    left: 50px;
+  }
+}

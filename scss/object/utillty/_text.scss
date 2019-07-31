@@ -1,0 +1,30 @@
+.u-text__first{
+  font-size: $font-size_x;
+  font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN', sans-serif ;
+  text-align: center;
+  &--span{
+    font-family: 'Noto Serif', serif;
+  font-size:   $font-size-sm;
+  }
+  &--article{
+    font-size: $font-size_s;
+    line-height: 2;
+  }
+}
+.u-menu__text--h3{
+  font-size: $font-size_l;
+  //font-family:;
+}
+.u-menu__text--description{
+font-size: 1.2em;
+}
+.u-menu__text--description > p {
+  font-size: 2rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight:800;
+  text-align: right;
+}
+.u-info--text{
+  text-align: left;
+  font-size:20px;
+}

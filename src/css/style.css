@@ -1,0 +1,389 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: "Avenir", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "Roboto", "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic";
+  line-height: 1.6;
+  color: #fcfcfc;
+  text-size-adjust: 100%;
+  letter-spacing: 0.1em; }
+
+a {
+  text-decoration: none; }
+
+a:hover {
+  transition: .3s;
+  text-decoration: none; }
+
+img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 600px; }
+
+.header {
+  box-sizing: border-box;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  z-index: 3;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px; }
+  .header--float--active {
+    background: #1b3667;
+    transition: .5s; }
+
+.first {
+  text-align: center;
+  padding-right: 30px;
+  padding-left: 30px; }
+  .first__img--container {
+    display: flex;
+    justify-content: space-between;
+    margin: auto; }
+
+.second {
+  color: #fcfcfc;
+  width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; }
+
+.third {
+  margin: 0 auto; }
+
+.footer {
+  overflow: hidden;
+  text-align: center;
+  margin: 0 auto;
+  background: #775d51;
+  position: relative; }
+  .footer__button--container {
+    position: absolute;
+    top: 120px;
+    left: 50px; }
+
+.menu-trigger,
+.menu-trigger span {
+  display: inline-block;
+  transition: all .4s;
+  box-sizing: border-box;
+  z-index: 2; }
+
+.menu-trigger {
+  position: relative;
+  width: 50px;
+  height: 44px; }
+
+.menu-trigger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #242727;
+  border-radius: 4px; }
+
+.menu-trigger span:nth-of-type(1) {
+  top: 0; }
+
+.menu-trigger span:nth-of-type(2) {
+  top: 20px; }
+
+.menu-trigger span:nth-of-type(3) {
+  bottom: 0; }
+
+.menu-trigger.active span:nth-of-type(1) {
+  -webkit-transform: translateY(20px) rotate(-45deg);
+  transform: translateY(20px) rotate(-45deg); }
+
+.menu-trigger.active span:nth-of-type(2) {
+  opacity: 0; }
+
+.menu-trigger.active span:nth-of-type(3) {
+  -webkit-transform: translateY(-20px) rotate(45deg);
+  transform: translateY(-20px) rotate(45deg); }
+
+.c-container {
+  overflow: hidden;
+  text-align: center; }
+  .c-container__menu--left {
+    display: flex;
+    flex-direction: row;
+    padding-right: 15px;
+    padding-left: 15px; }
+  .c-container__menu--right {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 15px;
+    padding-left: 15px;
+    position: relative;
+    float: right; }
+
+.text-container {
+  text-align: left;
+  margin-left: 20px;
+  margin-right: 20px; }
+
+.p-info__container {
+  background: #775d51;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: row; }
+  .p-info__container--text {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: 150px;
+    padding-left: 8%;
+    padding-right: 8%; }
+
+.c-btn-circle-flat {
+  display: inline-block;
+  text-decoration: none;
+  background: #87befd;
+  color: #FFF;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  transition: .4s; }
+
+.c-btn-circle-flat:hover {
+  cursor: pointer; }
+
+.c-btn-circle-flat---facebook {
+  display: inline-block;
+  text-decoration: none;
+  background: #1b3667;
+  color: #FFF;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  transition: .4s; }
+  .c-btn-circle-flat---facebook:hover {
+    cursor: pointer; }
+
+.nav-menu {
+  background: #1b3667;
+  width: 100%;
+  height: 100vh;
+  transition: .5s;
+  position: fixed;
+  top: -100%;
+  left: 0; }
+  .nav-menu--active {
+    transition: 1s ease-in-out;
+    transform: translateY(100%); }
+
+.c-menu {
+  display: flex;
+  flex-direction: column;
+  margin-top: 210px; }
+  .c-menu__item {
+    font-size: 2.5em;
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'ヒラギノ明朝 ProN', 'Hiragino Mincho ProN', sans-serif; }
+  .c-menu__link {
+    color: white;
+    padding: 10px; }
+
+.c-menu__link:hover {
+  color: #1b3667;
+  background: white;
+  cursor: pointer; }
+
+.p-hero {
+  background-image: url("/img/cake-1850011_1280.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh; }
+
+a.scroll {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  text-decoration: none;
+  color: white;
+  cursor: auto; }
+
+a.scroll {
+  padding-top: 60px; }
+
+.p-hero > a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb 2s infinite;
+  animation: sdb 2s infinite;
+  box-sizing: border-box; }
+
+@-webkit-keyframes sdb {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0); }
+  20% {
+    -webkit-transform: rotate(-45deg) translate(-10px, 10px); }
+  40% {
+    -webkit-transform: rotate(-45deg) translate(0, 0); } }
+
+@keyframes sdb {
+  0% {
+    transform: rotate(-45deg) translate(0, 0); }
+  20% {
+    transform: rotate(-45deg) translate(-10px, 10px); }
+  40% {
+    transform: rotate(-45deg) translate(0, 0); } }
+
+.p-section__first {
+  background: #775d51; }
+
+.p-owner-container {
+  width: 800px;
+  height: 300px;
+  background: #775d51;
+  position: relative;
+  bottom: 200px;
+  left: 700px;
+  padding: 20px; }
+  .p-owner-container__text {
+    font-size: .9em; }
+  .p-owner-container__text > p {
+    font-size: 1.4em; }
+  .p-owner-container__text:after {
+    content: 'John Smith';
+    display: block;
+    line-height: 1; }
+
+.u-header-title {
+  font-family: 'Savoye LET',sans-serif;
+  font-size: 58px; }
+
+.u-section--padding {
+  padding-top: 220px;
+  padding-bottom: 100px; }
+
+.u-menu-padding-top {
+  padding-top: 100px; }
+
+.u-text__first {
+  font-size: 48px;
+  font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN', sans-serif;
+  text-align: center; }
+  .u-text__first--span {
+    font-family: 'Noto Serif', serif;
+    font-size: 13px; }
+  .u-text__first--article {
+    font-size: 16px;
+    line-height: 2; }
+
+.u-menu__text--h3 {
+  font-size: 36px; }
+
+.u-menu__text--description {
+  font-size: 1.2em; }
+
+.u-menu__text--description > p {
+  font-size: 2rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  text-align: right; }
+
+.u-info--text {
+  text-align: left;
+  font-size: 20px; }
+
+.u-margin {
+  margin-top: 30px; }
+
+.u-margin-bottom {
+  margin-bottom: 50px; }
+
+.u-img-size {
+  width: 500px;
+  height: 600px; }
+
+.u-img-size--menu {
+  width: 520px;
+  height: 410px; }
+
+.u-img-size__info {
+  width: 50%;
+  height: 100%; }
+
+.u-background-image {
+  background-image: url("/img/p0409_l.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.u-font__color--info {
+  color: #242727; }
+
+iframe {
+  vertical-align: bottom; }

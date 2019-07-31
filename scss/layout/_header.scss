@@ -1,0 +1,21 @@
+.header{
+  box-sizing: border-box;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  z-index: 3;
+  //height: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  //margin-top: 20px;
+  &--float--active{
+    background: #1b3667;
+    transition: .5s;
+  }
+}
+
+
+
