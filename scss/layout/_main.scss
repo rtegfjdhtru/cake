@@ -1,7 +1,10 @@
 .first{
   text-align: center;
+  width: 1300px;
   padding-right: $space_xxl;
   padding-left: $space_xxl;
+  margin: 0 auto;
+  height: 1200px;
   &__img--container{
     display: flex;
     justify-content: space-between;
@@ -9,6 +12,29 @@
 
   }
 }
+
+//vue　アニメーション
+.img--fade-enter-active,.img--fade-leave-active{
+  transition: all .3s ease;
+  opacity: 1;
+
+}
+.img--fade-enter,.img--fade-leave-to{
+  opacity: 0;
+  transform: translateX(-20%);
+}
+
+.img--fade--right-enter-active,.img--fade--right-leave-active{
+  transition: all .3s ease;
+  opacity: 1;
+}
+.img--fade--right-enter,.img--fade--right-leave-active{
+  opacity: 0;
+  transform: translateX(20%);
+}
+
+
+
 .second{
   color: $main-color;
   width: $container-width;
@@ -18,6 +44,6 @@
  //text-align: center;
 }
 .third{
-
 margin: 0 auto;
 }
+

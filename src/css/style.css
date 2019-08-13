@@ -78,19 +78,38 @@ img {
   z-index: 3;
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 20px; }
+  padding-top: 20px;
+  transition: .5s; }
   .header--float--active {
-    background: #1b3667;
-    transition: .5s; }
+    background: #1b3667; }
 
 .first {
   text-align: center;
+  width: 1300px;
   padding-right: 30px;
-  padding-left: 30px; }
+  padding-left: 30px;
+  margin: 0 auto;
+  height: 1200px; }
   .first__img--container {
     display: flex;
     justify-content: space-between;
     margin: auto; }
+
+.img--fade-enter-active, .img--fade-leave-active {
+  transition: all .3s ease;
+  opacity: 1; }
+
+.img--fade-enter, .img--fade-leave-to {
+  opacity: 0;
+  transform: translateX(-20%); }
+
+.img--fade--right-enter-active, .img--fade--right-leave-active {
+  transition: all .3s ease;
+  opacity: 1; }
+
+.img--fade--right-enter, .img--fade--right-leave-active {
+  opacity: 0;
+  transform: translateX(20%); }
 
 .second {
   color: #fcfcfc;
@@ -237,7 +256,8 @@ img {
     font-size: 2.5em;
     margin-top: 20px;
     text-align: center;
-    font-family: 'ヒラギノ明朝 ProN', 'Hiragino Mincho ProN', sans-serif; }
+    font-family: 'ヒラギノ明朝 ProN', 'Hiragino Mincho ProN', sans-serif;
+    display: none; }
   .c-menu__link {
     color: white;
     padding: 10px; }
@@ -322,7 +342,9 @@ a.scroll {
 
 .u-header-title {
   font-family: 'Savoye LET',sans-serif;
-  font-size: 58px; }
+  font-size: 58px;
+  position: relative;
+  top: 5px; }
 
 .u-section--padding {
   padding-top: 220px;

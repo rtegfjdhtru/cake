@@ -9,8 +9,10 @@
     <link href="./fontawesome-free-5.9.0-web/css/all.css" rel="stylesheet">
 </head>
 <body>
+
+
 <!--ヘッダー-->
-<header class="header" id="header">
+<header class="header" id="header" :class="{'header--float--active':scrollY > heightString}">
     <h1 class="u-header-title">sub</h1>
     <!--ハンバーガーメニュー-->
     <div id="hamburger-menu">
@@ -37,24 +39,37 @@
 <!--メイン-->
 <main>
     <!--ヒーローバナー-->
-    <section class="p-hero">
+    <section class="p-hero js-float-menu-target" id="hero">
         <a href="#" class="scroll"><span></span>Scroll</a>
     </section>
 
     <!--第一セクション-->
-    <section id="first" class="first c-container p-section__first u-section--padding">
+    <div class="p-section__first">
+    <section id="first" class="first c-container  u-section--padding">
         <h2 class="u-text__first">チョコレートケーキの完成系</h2>
         <span class="u-text__first--span">〜Perfect Chocolate cake〜</span>
         <p class="u-text__first--article u-margin">
             ガーナ産のカカオをたっぷり使用した贅沢品<br/>
             いままで味わったことのない体験をあなたに...<br>
         </p>
-        <div class="first__img--container u-section--padding">
-            <img src="./img/gahag-0042820862.jpg" alt="チョコレートの写真" class="u-img-size">
-            <img src="./img/gahag-0042820862.jpg" alt="チョコレートの写真" class="u-img-size">
+
+
+
+        <div class="first__img--container u-section--padding" v-scroll="handleScroll" id="vue--scroll-img">
+            <transition name="img--fade">
+            <img src="./img/gahag-0042820862.jpg" alt="チョコレートの写真" class="u-img-size" v-show="show">
+            </transition>
+
+            <transition name="img--fade--right">
+            <img src="./img/gahag-0042820862.jpg" alt="チョコレートの写真" class="u-img-size" v-show="show">
+            </transition>
         </div>
 
+
     </section>
+
+    </div>
+
 
     <div class="u-background-image">
         <section id="second" class="second c-container u-section--padding">
@@ -105,6 +120,24 @@
 
         </section>
     </div>
+
+<!--仮-->
+    <div class="u-background-image">
+        <section id="second2" class="second c-container u-section--padding">
+            <h2 class="u-text__first">MENU</h2>
+
+            <div id="menu-vue">
+                <menu-component
+                v-for="menu in menus"
+                v-bind:key="menu.id"
+                v-bind:menu="menu"
+                ></menu-component>
+            </div>
+
+        </section>
+    </div>
+    <!--仮-->
+
 
     <div class="u-background-image">
         <section id="third" class="third u-section--padding">

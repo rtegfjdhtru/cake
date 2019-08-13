@@ -6,11 +6,9 @@
   position: fixed;
   top: -100%;
   left: 0;
-  //right: -100%;
   &--active {
     transition:1s ease-in-out ;
     transform: translateY(100%);
-    //animation:s 1 ease-out forwards;
   }
 }
 
@@ -28,12 +26,13 @@
   flex-direction: column;
   margin-top: 210px;
 
-
   &__item {
     font-size: 2.5em;
     margin-top: $space_xl;
     text-align: center;
     font-family: 'ヒラギノ明朝 ProN', 'Hiragino Mincho ProN', sans-serif;
+    display: none; // todo　仮
+
   }
 
   &__link {
