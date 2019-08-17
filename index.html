@@ -75,26 +75,39 @@
         <section id="second" class="second c-container u-section--padding">
             <h2 class="u-text__first">MENU</h2>
 
-            <div class="c-container__menu--left u-menu-padding-top">
-                <img src="img/cake-1850011_1280.jpg" alt="メニューの写真" class="u-img-size--menu">
-                <div class="text-container">
+            <div class="c-container__menu--left u-menu-padding-top" v-observe-visibility="visibilityChanged01">
+                <transition name="menu--img--left">
+                <img src="img/cake-1850011_1280.jpg" alt="メニューの写真" class="u-img-size--menu j" v-if="isVisible01">
+                </transition>
+
+                <transition name="menu--text-right">
+                <div class="text-container" v-if="isVisible01">
+
                     <h3 class="u-menu__text--h3">超濃厚チョコレートケーキ</h3>
-                    <p>Super rich chocolate cake</p>
+                    <p >Super rich chocolate cake</p>
+
                     <div class="u-menu__text--description u-menu-padding-top">
                         ガーナで生産されたカカオを使ったとても濃厚なチョコレートケーキ<br/>
                         一口いれたらやみつきになる一品です。
                         <p>700円</p>
+
                     </div>
 
                 </div>
-
+                </transition>
             </div>
 
 
 
-            <div class="c-container__menu--right u-menu-padding-top">
-                <img src="img/cupcakes-690040_1280.jpg" alt="メニューの写真" class="u-img-size--menu">
-                <div class="text-container">
+            <div class="c-container__menu--right u-menu-padding-top" v-observe-visibility="visibilityChanged02">
+
+
+                <transition name="menu--img-right">
+                <img src="img/cupcakes-690040_1280.jpg" alt="メニューの写真" class="u-img-size--menu" v-if="isVisible02">
+                </transition>
+
+                <transition name="menu--text-left">
+                <div class="text-container" v-if="isVisible02">
                     <h3 class="u-menu__text--h3">超濃厚ホワイトチョコレートケーキ</h3>
                     <p>Super rich white chocolate cake</p>
                     <div class="u-menu__text--description u-menu-padding-top">
@@ -103,7 +116,9 @@
                         <p>700円</p>
                     </div>
                 </div>
+                </transition>
             </div>
+
 
             <div class="c-container__menu--left u-menu-padding-top">
                 <img src="img/coffee-4313336_1280.jpg" alt="メニューの写真" class="u-img-size--menu">
@@ -121,22 +136,24 @@
         </section>
     </div>
 
-<!--仮-->
+
+
+
+
+    <!--vue menu コンポーネント-->
     <div class="u-background-image">
         <section id="second2" class="second c-container u-section--padding">
             <h2 class="u-text__first">MENU</h2>
 
-            <div id="menu-vue">
                 <menu-component
                 v-for="menu in menus"
                 v-bind:key="menu.id"
                 v-bind:menu="menu"
                 ></menu-component>
-            </div>
 
         </section>
     </div>
-    <!--仮-->
+
 
 
     <div class="u-background-image">

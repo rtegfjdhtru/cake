@@ -15,7 +15,7 @@
 
 //vue　アニメーション
 .img--fade-enter-active,.img--fade-leave-active{
-  transition: all .3s ease;
+  transition: all 1s ease;
   opacity: 1;
 
 }
@@ -25,7 +25,7 @@
 }
 
 .img--fade--right-enter-active,.img--fade--right-leave-active{
-  transition: all .3s ease;
+  transition: all 1s ease;
   opacity: 1;
 }
 .img--fade--right-enter,.img--fade--right-leave-active{
@@ -41,8 +41,42 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
- //text-align: center;
 }
+.menu--img--left-enter-active,.menu--img--left-leave-active{
+  transition: all 1.5s ease;
+  opacity: 1;
+}
+.menu--img--left-enter,.menu--img--left--leave-active{
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.menu--text-right-enter-active,.menu--text-right-leave-active{
+  transition: all 1.5s ease;
+  opacity: 1;
+}
+.menu--text-right-enter,.menu--text-right-leave-active{
+  opacity: 0;
+  transform: translateX(100%);
+}
+.menu--img-right-enter-active,.menu--img-right-leave-active{
+  transition: all 1.5s ease;
+  opacity: 1;
+}
+.menu--img-right-enter,.menu--img-right-leave-active{
+  opacity: 0;
+  transform: translateX(100%);
+}
+.menu--text-left-enter-active,.menu--text-left-leave-active{
+  transition: all 1.5s ease;
+  opacity: 1;
+}
+.menu--text-left-enter,.menu--text-left-leave-active{
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+
+
 .third{
 margin: 0 auto;
 }

@@ -1,4 +1,7 @@
 import Vue from 'vue';
+import VueObserveVisibility from 'vue-observe-visibility'
+
+Vue.use(VueObserveVisibility)
 
 //スクロールのカスタムディレクティブ
 Vue.directive('scroll', {
@@ -75,6 +78,25 @@ new Vue({
 
 })
 
+new Vue({
+    el: '#second',
+    data: {
+        isVisible01: false,
+        isVisible02: false,
+    },
+    methods: {
+        visibilityChanged01 (isVisible01, entry) {
+            this.isVisible01 = isVisible01;
+            console.log(entry);
+        },
+        visibilityChanged02(isVisible02, entry) {
+            this.isVisible02 = isVisible02;
+            console.log(entry);
+        },
+    }
+})
+
+
 
 Vue.component('menu-component', {
     props: ['menu'],
@@ -84,7 +106,7 @@ Vue.component('menu-component', {
         }
     },
     template: `
-     <div class="c-container__menu--left u-menu-padding-top">
+     <div class="u-menu-padding-top" :class="menu.direction">
                 <img :src=menu.img alt="メニューの写真" class="u-img-size--menu">
                 <div class="text-container">
                     <h3 class="u-menu__text--h3">{{menu.title}}</h3>
@@ -97,6 +119,7 @@ Vue.component('menu-component', {
 
             </div>
     `
+
 })
 new Vue({
     el: '#second2',
@@ -104,6 +127,7 @@ new Vue({
         menus: [
             {
                 id: 1,
+                direction: 'c-container__menu--left',
                 img: 'img/cake-1850011_1280.jpg',
                 title: '超濃厚チョコレートケーキ',
                 sbTitle: 'Super rich chocolate cake',
@@ -113,6 +137,7 @@ new Vue({
             },
             {
                 id: 2,
+                direction: 'c-container__menu--right',
                 img: 'img/cupcakes-690040_1280.jpg',
                 title: '超濃厚ホワイトチョコレートケーキ',
                 sbTitle: 'Super rich white chocolate cake',
@@ -122,6 +147,7 @@ new Vue({
             ,
             {
                 id: 3,
+                direction: 'c-container__menu--left',
                 img: 'img/coffee-4313336_1280.jpg',
                 title: 'ブルーマウンテンコーヒ',
                 sbTitle: 'Blue mountain coffee',
@@ -133,4 +159,7 @@ new Vue({
         ]
     }
 })
+
+
+
 
