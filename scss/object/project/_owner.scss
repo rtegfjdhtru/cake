@@ -6,6 +6,12 @@ background: $main-background;
   bottom: 200px;
   left: 700px;
   padding: $space_xl;
+  @include sumaho{
+    position: static;
+    width: auto;
+    height: 100%;
+
+  }
   &__text{
     font-size: .9em;
   }

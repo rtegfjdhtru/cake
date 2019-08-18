@@ -45,99 +45,96 @@
 
     <!--第一セクション-->
     <div class="p-section__first">
-    <section id="first" class="first c-container  u-section--padding">
-        <h2 class="u-text__first">チョコレートケーキの完成系</h2>
-        <span class="u-text__first--span">〜Perfect Chocolate cake〜</span>
-        <p class="u-text__first--article u-margin">
-            ガーナ産のカカオをたっぷり使用した贅沢品<br/>
-            いままで味わったことのない体験をあなたに...<br>
-        </p>
+        <section id="first" class="first c-container  u-section--padding">
+            <h2 class="u-text__first">チョコレートケーキの完成系</h2>
+            <span class="u-text__first--span">〜Perfect Chocolate cake〜</span>
+            <p class="u-text__first--article u-margin">
+                ガーナ産のカカオをたっぷり使用した贅沢品<br/>
+                いままで味わったことのない体験をあなたに...<br>
+            </p>
 
 
-
-        <div class="first__img--container u-section--padding" v-scroll="handleScroll" id="vue--scroll-img">
-            <transition name="img--fade">
-            <img src="./img/gahag-0042820862.jpg" alt="チョコレートの写真" class="u-img-size" v-show="show">
-            </transition>
-
-            <transition name="img--fade--right">
-            <img src="./img/gahag-0042820862.jpg" alt="チョコレートの写真" class="u-img-size" v-show="show">
-            </transition>
-        </div>
-
-
-    </section>
-
-    </div>
-
-
-    <div class="u-background-image">
-        <section id="second" class="second c-container u-section--padding">
-            <h2 class="u-text__first">MENU</h2>
-
-            <div class="c-container__menu--left u-menu-padding-top" v-observe-visibility="visibilityChanged01">
-                <transition name="menu--img--left">
-                <img src="img/cake-1850011_1280.jpg" alt="メニューの写真" class="u-img-size--menu j" v-if="isVisible01">
+            <div class="first__img--container u-section--padding--container" v-scroll="handleScroll" id="vue--scroll-img">
+                <transition name="img--fade">
+                    <img src="./img/gahag-0042820862.jpg" alt="チョコレートの写真" class="u-img-size" v-show="show">
                 </transition>
 
-                <transition name="menu--text-right">
-                <div class="text-container" v-if="isVisible01">
-
-                    <h3 class="u-menu__text--h3">超濃厚チョコレートケーキ</h3>
-                    <p >Super rich chocolate cake</p>
-
-                    <div class="u-menu__text--description u-menu-padding-top">
-                        ガーナで生産されたカカオを使ったとても濃厚なチョコレートケーキ<br/>
-                        一口いれたらやみつきになる一品です。
-                        <p>700円</p>
-
-                    </div>
-
-                </div>
+                <transition name="img--fade--right">
+                    <img src="./img/chocolate-2224998_1280.jpg" alt="チョコレートの写真" class="u-img-size" v-show="show">
                 </transition>
             </div>
 
-
-
-            <div class="c-container__menu--right u-menu-padding-top" v-observe-visibility="visibilityChanged02">
-
-
-                <transition name="menu--img-right">
-                <img src="img/cupcakes-690040_1280.jpg" alt="メニューの写真" class="u-img-size--menu" v-if="isVisible02">
-                </transition>
-
-                <transition name="menu--text-left">
-                <div class="text-container" v-if="isVisible02">
-                    <h3 class="u-menu__text--h3">超濃厚ホワイトチョコレートケーキ</h3>
-                    <p>Super rich white chocolate cake</p>
-                    <div class="u-menu__text--description u-menu-padding-top">
-                        ほどよい甘さがくせになる絶妙な一品<br/>
-                        コーヒと合わせてお召し上がりください。
-                        <p>700円</p>
-                    </div>
-                </div>
-                </transition>
-            </div>
-
-
-            <div class="c-container__menu--left u-menu-padding-top">
-                <img src="img/coffee-4313336_1280.jpg" alt="メニューの写真" class="u-img-size--menu">
-                <div class="text-container">
-                    <h3 class="u-menu__text--h3">ブルーマウンテンコーヒ</h3>
-                    <p>Blue mountain coffee</p>
-                    <div class="u-menu__text--description u-menu-padding-top">
-                        ジャマイカのブルーマウンテンで取れた厳選された豆を使用<br/>
-                        幸福なひとときをあなたに...
-                        <p>500円</p>
-                    </div>
-                </div>
-            </div>
 
         </section>
+
     </div>
 
 
 
+
+    <!--<div class="u-background-image">-->
+    <!--<section id="second" class="second c-container u-section&#45;&#45;padding">-->
+    <!--<h2 class="u-text__first">MENU</h2>-->
+
+    <!--<div class="c-container__menu&#45;&#45;left u-menu-padding-top" v-observe-visibility="visibilityChanged01">-->
+    <!--<transition name="menu&#45;&#45;img&#45;&#45;left">-->
+    <!--<img src="img/cake-1850011_1280.jpg" alt="メニューの写真" class="u-img-size&#45;&#45;menu j" v-if="isVisible01">-->
+    <!--</transition>-->
+
+    <!--<transition name="menu&#45;&#45;text-right">-->
+    <!--<div class="text-container" v-if="isVisible01">-->
+
+    <!--<h3 class="u-menu__text&#45;&#45;h3">超濃厚チョコレートケーキ</h3>-->
+    <!--<p >Super rich chocolate cake</p>-->
+
+    <!--<div class="u-menu__text&#45;&#45;description u-menu-padding-top">-->
+    <!--ガーナで生産されたカカオを使ったとても濃厚なチョコレートケーキ<br/>-->
+    <!--一口いれたらやみつきになる一品です。-->
+    <!--<p>700円</p>-->
+
+    <!--</div>-->
+
+    <!--</div>-->
+    <!--</transition>-->
+    <!--</div>-->
+
+
+    <!--<div class="c-container__menu&#45;&#45;right u-menu-padding-top" v-observe-visibility="visibilityChanged02">-->
+
+
+    <!--<transition name="menu&#45;&#45;img-right">-->
+    <!--<img src="img/cupcakes-690040_1280.jpg" alt="メニューの写真" class="u-img-size&#45;&#45;menu" v-if="isVisible02">-->
+    <!--</transition>-->
+
+    <!--<transition name="menu&#45;&#45;text-left">-->
+    <!--<div class="text-container" v-if="isVisible02">-->
+    <!--<h3 class="u-menu__text&#45;&#45;h3">超濃厚ホワイトチョコレートケーキ</h3>-->
+    <!--<p>Super rich white chocolate cake</p>-->
+    <!--<div class="u-menu__text&#45;&#45;description u-menu-padding-top">-->
+    <!--ほどよい甘さがくせになる絶妙な一品<br/>-->
+    <!--コーヒと合わせてお召し上がりください。-->
+    <!--<p>700円</p>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</transition>-->
+    <!--</div>-->
+
+
+    <!--<div class="c-container__menu&#45;&#45;left u-menu-padding-top">-->
+    <!--<img src="img/coffee-4313336_1280.jpg" alt="メニューの写真" class="u-img-size&#45;&#45;menu">-->
+    <!--<div class="text-container">-->
+    <!--<h3 class="u-menu__text&#45;&#45;h3">ブルーマウンテンコーヒ</h3>-->
+    <!--<p>Blue mountain coffee</p>-->
+    <!--<div class="u-menu__text&#45;&#45;description u-menu-padding-top">-->
+    <!--ジャマイカのブルーマウンテンで取れた厳選された豆を使用<br/>-->
+    <!--幸福なひとときをあなたに...-->
+    <!--<p>500円</p>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+
+    <!--</section>-->
+    <!--</div>-->
 
 
     <!--vue menu コンポーネント-->
@@ -145,15 +142,14 @@
         <section id="second2" class="second c-container u-section--padding">
             <h2 class="u-text__first">MENU</h2>
 
-                <menu-component
-                v-for="menu in menus"
-                v-bind:key="menu.id"
-                v-bind:menu="menu"
-                ></menu-component>
+            <menu-component
+                            v-for="menu in menus"
+                            v-bind:key="menu.id"
+                            v-bind:menu="menu"
+            ></menu-component>
 
         </section>
     </div>
-
 
 
     <div class="u-background-image">
@@ -197,12 +193,12 @@
         <h4 class="u-header-title">sub</h4>
         <p class="footer__text">Copyright © Sub Co.,Ltd. All rights reserved</p>
         <div class="footer__button--container">
-        <button class="c-btn-circle-flat"><i class="fab fa-twitter fa-3x"></i></button>
-        <button class="c-btn-circle-flat---facebook"><i class="fab fa-facebook-square fa-3x"></i></button>
+            <button class="c-btn-circle-flat"><i class="fab fa-twitter icon-size"></i></button>
+            <button class="c-btn-circle-flat---facebook"><i class="fab fa-facebook-square icon-size"></i></button>
         </div>
     </footer>
 
-
+    <div id="page_top"><a href="#"></a></div>
 </main>
 
 <script src="./dist/js/bundle.js"></script>

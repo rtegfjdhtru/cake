@@ -1,13 +1,23 @@
 .u-img-size{
   width: 500px;
   height: 600px;
+  @include sumaho{
+    max-width: 300px;
+    height: 300px;
+  }
 }
 .u-img-size--menu{
   width: 520px;
   height: 410px;
+  @include sumaho{
+    max-width: 300px;
+    height: 200px;
+  }
 }
 .u-img-size__info{
   width: 50%;
   height:100%;
-
+@include sumaho{
+  width: 100%;
+}
 }

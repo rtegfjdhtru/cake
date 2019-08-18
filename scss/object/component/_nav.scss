@@ -25,13 +25,15 @@
   display: flex;
   flex-direction: column;
   margin-top: 210px;
-
+@include sumaho{
+  margin-top: 110px;
+}
   &__item {
     font-size: 2.5em;
     margin-top: $space_xl;
     text-align: center;
     font-family: 'ヒラギノ明朝 ProN', 'Hiragino Mincho ProN', sans-serif;
-    display: none; // todo　仮
+    //display: none; // todo　仮 必ず消せ
 
   }
 

@@ -90,10 +90,16 @@ img {
   padding-left: 30px;
   margin: 0 auto;
   height: 1200px; }
+  @media screen and (max-width: 414px) {
+    .first {
+      width: 80%; } }
   .first__img--container {
     display: flex;
     justify-content: space-between;
     margin: auto; }
+    @media screen and (max-width: 414px) {
+      .first__img--container {
+        display: block; } }
 
 .img--fade-enter-active, .img--fade-leave-active {
   transition: all 1s ease;
@@ -117,6 +123,9 @@ img {
   margin: 0 auto;
   display: flex;
   flex-direction: column; }
+  @media screen and (max-width: 414px) {
+    .second {
+      width: 100%; } }
 
 .menu--img--left-enter-active, .menu--img--left-leave-active {
   transition: all 1.5s ease;
@@ -163,6 +172,9 @@ img {
     position: absolute;
     top: 120px;
     left: 50px; }
+    @media screen and (max-width: 414px) {
+      .footer__button--container {
+        top: 160px; } }
 
 .menu-trigger,
 .menu-trigger span {
@@ -212,6 +224,10 @@ img {
     flex-direction: row;
     padding-right: 15px;
     padding-left: 15px; }
+    @media screen and (max-width: 414px) {
+      .c-container__menu--left {
+        display: flex;
+        flex-direction: column; } }
   .c-container__menu--right {
     display: flex;
     flex-direction: row-reverse;
@@ -219,11 +235,18 @@ img {
     padding-left: 15px;
     position: relative;
     float: right; }
+    @media screen and (max-width: 414px) {
+      .c-container__menu--right {
+        display: flex;
+        flex-direction: column; } }
 
 .text-container {
   text-align: left;
   margin-left: 20px;
   margin-right: 20px; }
+  @media screen and (max-width: 414px) {
+    .text-container {
+      margin-top: 10px; } }
 
 .p-info__container {
   background: #775d51;
@@ -231,13 +254,21 @@ img {
   height: 500px;
   display: flex;
   flex-direction: row; }
+  @media screen and (max-width: 414px) {
+    .p-info__container {
+      flex-direction: column; } }
   .p-info__container--text {
-    width: 100%;
     text-align: center;
     position: relative;
     top: 150px;
     padding-left: 8%;
     padding-right: 8%; }
+    @media screen and (max-width: 414px) {
+      .p-info__container--text {
+        top: 0;
+        padding-left: 5px;
+        padding-right: 5px;
+        position: static; } }
 
 .c-btn-circle-flat {
   display: inline-block;
@@ -250,6 +281,10 @@ img {
   text-align: center;
   overflow: hidden;
   transition: .4s; }
+  @media screen and (max-width: 414px) {
+    .c-btn-circle-flat {
+      width: 30px;
+      height: 30px; } }
 
 .c-btn-circle-flat:hover {
   cursor: pointer; }
@@ -265,8 +300,45 @@ img {
   text-align: center;
   overflow: hidden;
   transition: .4s; }
+  @media screen and (max-width: 414px) {
+    .c-btn-circle-flat---facebook {
+      width: 30px;
+      height: 30px; } }
   .c-btn-circle-flat---facebook:hover {
     cursor: pointer; }
+
+#page_top {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  background: #e09b54;
+  opacity: 0.6;
+  border-radius: 50%; }
+
+#page_top a {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-decoration: none; }
+
+#page_top a::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f102';
+  font-size: 25px;
+  color: #fff;
+  position: absolute;
+  width: 25px;
+  height: 35px;
+  top: -5px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center; }
 
 .nav-menu {
   background: #1b3667;
@@ -284,12 +356,14 @@ img {
   display: flex;
   flex-direction: column;
   margin-top: 210px; }
+  @media screen and (max-width: 414px) {
+    .c-menu {
+      margin-top: 110px; } }
   .c-menu__item {
     font-size: 2.5em;
     margin-top: 20px;
     text-align: center;
-    font-family: 'ヒラギノ明朝 ProN', 'Hiragino Mincho ProN', sans-serif;
-    display: none; }
+    font-family: 'ヒラギノ明朝 ProN', 'Hiragino Mincho ProN', sans-serif; }
   .c-menu__link {
     color: white;
     padding: 10px; }
@@ -304,7 +378,8 @@ img {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh; }
+  height: 100vh;
+  width: 100%; }
 
 a.scroll {
   position: absolute;
@@ -335,6 +410,9 @@ a.scroll {
   -webkit-animation: sdb 2s infinite;
   animation: sdb 2s infinite;
   box-sizing: border-box; }
+  @media screen and (max-width: 414px) {
+    .p-hero > a span {
+      left: 47%; } }
 
 @-webkit-keyframes sdb {
   0% {
@@ -363,6 +441,11 @@ a.scroll {
   bottom: 200px;
   left: 700px;
   padding: 20px; }
+  @media screen and (max-width: 414px) {
+    .p-owner-container {
+      position: static;
+      width: auto;
+      height: 100%; } }
   .p-owner-container__text {
     font-size: .9em; }
   .p-owner-container__text > p {
@@ -384,6 +467,15 @@ a.scroll {
 
 .u-menu-padding-top {
   padding-top: 100px; }
+  @media screen and (max-width: 414px) {
+    .u-menu-padding-top {
+      padding-top: 50px; } }
+
+.u-section--padding--container {
+  padding-top: 200px; }
+  @media screen and (max-width: 414px) {
+    .u-section--padding--container {
+      padding-top: 120px; } }
 
 .u-text__first {
   font-size: 48px;
@@ -398,6 +490,9 @@ a.scroll {
 
 .u-menu__text--h3 {
   font-size: 36px; }
+  @media screen and (max-width: 414px) {
+    .u-menu__text--h3 {
+      font-size: 26px; } }
 
 .u-menu__text--description {
   font-size: 1.2em; }
@@ -411,6 +506,16 @@ a.scroll {
 .u-info--text {
   text-align: left;
   font-size: 20px; }
+  @media screen and (max-width: 414px) {
+    .u-info--text {
+      font-size: 13px;
+      padding-bottom: 20px; } }
+
+.icon-size {
+  font-size: 3em; }
+  @media screen and (max-width: 414px) {
+    .icon-size {
+      font-size: 1.5em; } }
 
 .u-margin {
   margin-top: 30px; }
@@ -421,14 +526,25 @@ a.scroll {
 .u-img-size {
   width: 500px;
   height: 600px; }
+  @media screen and (max-width: 414px) {
+    .u-img-size {
+      max-width: 300px;
+      height: 300px; } }
 
 .u-img-size--menu {
   width: 520px;
   height: 410px; }
+  @media screen and (max-width: 414px) {
+    .u-img-size--menu {
+      max-width: 300px;
+      height: 200px; } }
 
 .u-img-size__info {
   width: 50%;
   height: 100%; }
+  @media screen and (max-width: 414px) {
+    .u-img-size__info {
+      width: 100%; } }
 
 .u-background-image {
   background-image: url("/img/p0409_l.jpeg");

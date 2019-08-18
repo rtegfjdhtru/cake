@@ -25,6 +25,28 @@ $space_3l: 40px;
 
 $base-font-family:'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','Roboto','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic';
 
+$breakpoints:(
+        'sm': 'screen and (max-width: 414px)',
+        'md': 'screen and (max-width: 768px)',
+        'lg': 'screen and (max-width: 1000px)',
+        'xl': 'screen and (max-width: 1200px)',
+);
+
+//スマホ用mixin
+@mixin sumaho($breakpoint: sm){
+  @media  #{map_get($breakpoints,$breakpoint)}{
+    @content
+  }
+}
+
+@mixin ipad($breakpoint: md){
+  @media #{map_get($breakpoints,$breakpoint)}{
+    @content
+  }
+}
+
+
+
 //base
 html,body{
   width: 100%;

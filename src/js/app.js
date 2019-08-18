@@ -78,45 +78,49 @@ new Vue({
 
 })
 
-new Vue({
-    el: '#second',
-    data: {
-        isVisible01: false,
-        isVisible02: false,
-    },
-    methods: {
-        visibilityChanged01 (isVisible01, entry) {
-            this.isVisible01 = isVisible01;
-            console.log(entry);
-        },
-        visibilityChanged02(isVisible02, entry) {
-            this.isVisible02 = isVisible02;
-            console.log(entry);
-        },
-    }
-})
-
+// new Vue({
+//     el: '#second',
+//     data: {
+//         isVisible01: false,
+//         isVisible02: false,
+//     },
+//     methods: {
+//         visibilityChanged01(isVisible01, entry) {
+//             this.isVisible01 = isVisible01;
+//             console.log(entry);
+//         },
+//         visibilityChanged02(isVisible02, entry) {
+//             this.isVisible02 = isVisible02;
+//             console.log(entry);
+//         },
+//     }
+// })
 
 
 Vue.component('menu-component', {
     props: ['menu'],
     data: function () {
         return {
-            img: ''
+            img: '',
         }
     },
     template: `
+<template 
      <div class="u-menu-padding-top" :class="menu.direction">
-                <img :src=menu.img alt="メニューの写真" class="u-img-size--menu">
+     <transition>
+                <img :src=menu.img alt="メニューの写真" class="u-img-size--menu" >
+                </transition>
+                
+               
                 <div class="text-container">
                     <h3 class="u-menu__text--h3">{{menu.title}}</h3>
                     <p>{{menu.sbTitle}}</p>
-                    <div class="u-menu__text--description u-menu-padding-top" v-html="menu.text"> 
-                        <p>{{menu.money}}円</p>
+                    <div class="u-menu__text--description u-menu-padding-top"> 
+                    <span v-html="menu.text"></span>
+                    <p>{{menu.money}}円</p>
                     </div>
-
+                     
                 </div>
-
             </div>
     `
 
@@ -127,16 +131,20 @@ new Vue({
         menus: [
             {
                 id: 1,
+                // animationImg:'menu--img--left',
+                // animationText:'menu--text-right',
                 direction: 'c-container__menu--left',
                 img: 'img/cake-1850011_1280.jpg',
                 title: '超濃厚チョコレートケーキ',
                 sbTitle: 'Super rich chocolate cake',
-                text: 'ガーナで生産されたカカオを使ったとても濃厚なチョコレートケーキ<br/>' +
+                text: 'ガーナで生産されたカカオを使ったとても濃厚なチョコレートケーキ</br>' +
                     '一口いれたらやみつきになる一品です',
                 money: '700'
             },
             {
                 id: 2,
+                // animationImg:'menu--img-right',
+                // animationText:'menu--text-left',
                 direction: 'c-container__menu--right',
                 img: 'img/cupcakes-690040_1280.jpg',
                 title: '超濃厚ホワイトチョコレートケーキ',
@@ -147,8 +155,11 @@ new Vue({
             ,
             {
                 id: 3,
+                // animationImg:'menu--img--left',
+                // animationText:'menu--text-right',
                 direction: 'c-container__menu--left',
                 img: 'img/coffee-4313336_1280.jpg',
+                // visibilityChanged: 'visibilityChanged03',
                 title: 'ブルーマウンテンコーヒ',
                 sbTitle: 'Blue mountain coffee',
                 text:
@@ -157,7 +168,7 @@ new Vue({
                 money: '500'
             }
         ]
-    }
+    },
 })
 
 

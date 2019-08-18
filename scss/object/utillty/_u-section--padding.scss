@@ -4,4 +4,14 @@
 }
 .u-menu-padding-top{
   padding-top:100px;
+  @include sumaho{
+    padding-top: 50px;
+  }
+}
+.u-section--padding--container{
+  padding-top: 200px;
+  @include sumaho{
+    padding-top: 120px;
+  }
+
 }

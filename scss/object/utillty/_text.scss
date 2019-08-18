@@ -13,6 +13,9 @@
 }
 .u-menu__text--h3{
   font-size: $font-size_l;
+  @include sumaho{
+    font-size: 26px;
+  }
   //font-family:;
 }
 .u-menu__text--description{
@@ -27,4 +30,15 @@ font-size: 1.2em;
 .u-info--text{
   text-align: left;
   font-size:20px;
+  @include sumaho{
+    font-size: 13px;
+    padding-bottom: 20px;
+  }
+}
+
+.icon-size{
+  font-size: 3em;
+  @include sumaho{
+    font-size: 1.5em;
+  }
 }
