@@ -105,9 +105,9 @@ Vue.component('menu-component', {
         }
     },
     template: `
-<template 
+
      <div class="u-menu-padding-top" :class="menu.direction">
-     <transition>
+     <transition name="">
                 <img :src=menu.img alt="メニューの写真" class="u-img-size--menu" >
                 </transition>
                 
