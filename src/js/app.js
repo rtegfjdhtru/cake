@@ -105,10 +105,9 @@ Vue.component('menu-component', {
         }
     },
     template: `
-
      <div class="u-menu-padding-top" :class="menu.direction">
-     <transition name="">
-                <img :src=menu.img alt="メニューの写真" class="u-img-size--menu" >
+     <transition name="menu--img--left">
+                <img :src=menu.img alt="メニューの写真" class="u-img-size--menu">
                 </transition>
                 
                
@@ -139,13 +138,14 @@ new Vue({
                 sbTitle: 'Super rich chocolate cake',
                 text: 'ガーナで生産されたカカオを使ったとても濃厚なチョコレートケーキ</br>' +
                     '一口いれたらやみつきになる一品です',
-                money: '700'
+                money: '700',
+
             },
             {
                 id: 2,
                 // animationImg:'menu--img-right',
                 // animationText:'menu--text-left',
-                direction: 'c-container__menu--right',
+                direction: 'c-container__menu--left',
                 img: 'img/cupcakes-690040_1280.jpg',
                 title: '超濃厚ホワイトチョコレートケーキ',
                 sbTitle: 'Super rich white chocolate cake',
@@ -172,5 +172,33 @@ new Vue({
 })
 
 
+Vue.component('menu-component2',{
+    props:['title'],
+    data:function(){
+        return{
+        }
+
+    },
+
+    template:`
+<h1 v-on:scroll="$emit('text-show')" >{{title}} </h1>
+
+`
+
+    
+})
+new Vue({
+    el:'#app1111',
+    data:{
+        show:false
+    },
+    methods:{
+        visibilityChanged (show, entry) {
+            this.show = show
+            console.log(entry)
+    }
+}
+
+})
 
 

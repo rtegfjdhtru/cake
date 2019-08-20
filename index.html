@@ -54,7 +54,8 @@
             </p>
 
 
-            <div class="first__img--container u-section--padding--container" v-scroll="handleScroll" id="vue--scroll-img">
+            <div class="first__img--container u-section--padding--container" v-scroll="handleScroll"
+                 id="vue--scroll-img">
                 <transition name="img--fade">
                     <img src="./img/gahag-0042820862.jpg" alt="チョコレートの写真" class="u-img-size" v-show="show">
                 </transition>
@@ -68,8 +69,6 @@
         </section>
 
     </div>
-
-
 
 
     <!--<div class="u-background-image">-->
@@ -143,13 +142,24 @@
             <h2 class="u-text__first">MENU</h2>
 
             <menu-component
-                            v-for="menu in menus"
-                            v-bind:key="menu.id"
-                            v-bind:menu="menu"
+                    v-for="menu in menus"
+                    v-bind:key="menu.id"
+                    v-bind:menu="menu"
             ></menu-component>
 
         </section>
     </div>
+
+
+
+<section id="app1111">
+
+    <menu-component2 v-observe-visibility="visibilityChanged"
+                     title="あいうけお"
+                     v-on:text-show="visibilityChanged()"
+
+                     style="color:red"></menu-component2>
+</section>
 
 
     <div class="u-background-image">
