@@ -374,7 +374,7 @@ img {
   cursor: pointer; }
 
 .p-hero {
-  background-image: url("/img/cake-1850011_1280.jpg");
+  background-image: url("../../img/cake-1850011_1280.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -547,7 +547,7 @@ a.scroll {
       width: 100%; } }
 
 .u-background-image {
-  background-image: url("/img/p0409_l.jpeg");
+  background-image: url("../../img/p0409_l.jpeg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat; }

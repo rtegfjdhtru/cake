@@ -6,7 +6,7 @@
     <title>ケーキのホームページ</title>
     <link href="src/css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap" rel="stylesheet">
-    <link href="./fontawesome-free-5.9.0-web/css/all.css" rel="stylesheet">
+    <link href="fontawesome-free-5.9.0-web/css/all.css" rel="stylesheet">
 </head>
 <body>
 
@@ -71,9 +71,9 @@
     </div>
 
 
-    <!--<div class="u-background-image">-->
-    <!--<section id="second" class="second c-container u-section&#45;&#45;padding">-->
-    <!--<h2 class="u-text__first">MENU</h2>-->
+    <div class="u-background-image">
+    <section id="second" class="second c-container u-section--padding">
+    <h2 class="u-text__first">MENU</h2>
 
     <!--<div class="c-container__menu&#45;&#45;left u-menu-padding-top" v-observe-visibility="visibilityChanged01">-->
     <!--<transition name="menu&#45;&#45;img&#45;&#45;left">-->
@@ -119,21 +119,25 @@
     <!--</div>-->
 
 
-    <!--<div class="c-container__menu&#45;&#45;left u-menu-padding-top">-->
-    <!--<img src="img/coffee-4313336_1280.jpg" alt="メニューの写真" class="u-img-size&#45;&#45;menu">-->
-    <!--<div class="text-container">-->
-    <!--<h3 class="u-menu__text&#45;&#45;h3">ブルーマウンテンコーヒ</h3>-->
-    <!--<p>Blue mountain coffee</p>-->
-    <!--<div class="u-menu__text&#45;&#45;description u-menu-padding-top">-->
-    <!--ジャマイカのブルーマウンテンで取れた厳選された豆を使用<br/>-->
-    <!--幸福なひとときをあなたに...-->
-    <!--<p>500円</p>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
+    <div class="c-container__menu--left u-menu-padding-top js-menu" v-scroll="menuImgslide">
 
-    <!--</section>-->
-    <!--</div>-->
+        <transition name="menu--img-right">
+    <img src="img/coffee-4313336_1280.jpg" alt="メニューの写真" class="u-img-size--menu js-menu-height" v-show="show">
+        </transition>
+
+    <div class="text-container">
+    <h3 class="u-menu__text--h3">ブルーマウンテンコーヒ</h3>
+    <p>Blue mountain coffee</p>
+    <div class="u-menu__text--description u-menu-padding-top">
+    ジャマイカのブルーマウンテンで取れた厳選された豆を使用<br/>
+    幸福なひとときをあなたに...
+    <p>500円</p>
+    </div>
+    </div>
+    </div>
+
+    </section>
+    </div>
 
 
     <!--vue menu コンポーネント-->
@@ -151,15 +155,6 @@
     </div>
 
 
-
-<section id="app1111">
-
-    <menu-component2 v-observe-visibility="visibilityChanged"
-                     title="あいうけお"
-                     v-on:text-show="visibilityChanged()"
-
-                     style="color:red"></menu-component2>
-</section>
 
 
     <div class="u-background-image">

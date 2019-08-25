@@ -77,24 +77,34 @@ new Vue({
     }
 
 })
+let windowSize = window.innerHeight;
+let menu = document.querySelector('.js-menu-height');
+    menu = menu.offsetTop - windowSize
+new Vue({
+    el: '#second',
+    data: {
+        isVisible01: false,
+        isVisible02: false,
+        show:false,
+        menu:menu,
+        'js-active':true,
+        scrollY:window.scrollY,
+    },
+    methods: {
+        menuImgslide:function(){
+            console.log(scrollY)
+            console.log('menuの値' + menu)
+            if( scrollY >  menu){
+                this.show= true
+            }else{
+                this.show = false
+            }
 
-// new Vue({
-//     el: '#second',
-//     data: {
-//         isVisible01: false,
-//         isVisible02: false,
-//     },
-//     methods: {
-//         visibilityChanged01(isVisible01, entry) {
-//             this.isVisible01 = isVisible01;
-//             console.log(entry);
-//         },
-//         visibilityChanged02(isVisible02, entry) {
-//             this.isVisible02 = isVisible02;
-//             console.log(entry);
-//         },
-//     }
-// })
+        }
+    }
+
+
+})
 
 
 Vue.component('menu-component', {
@@ -130,8 +140,6 @@ new Vue({
         menus: [
             {
                 id: 1,
-                // animationImg:'menu--img--left',
-                // animationText:'menu--text-right',
                 direction: 'c-container__menu--left',
                 img: 'img/cake-1850011_1280.jpg',
                 title: '超濃厚チョコレートケーキ',
@@ -143,8 +151,6 @@ new Vue({
             },
             {
                 id: 2,
-                // animationImg:'menu--img-right',
-                // animationText:'menu--text-left',
                 direction: 'c-container__menu--left',
                 img: 'img/cupcakes-690040_1280.jpg',
                 title: '超濃厚ホワイトチョコレートケーキ',
@@ -155,8 +161,6 @@ new Vue({
             ,
             {
                 id: 3,
-                // animationImg:'menu--img--left',
-                // animationText:'menu--text-right',
                 direction: 'c-container__menu--left',
                 img: 'img/coffee-4313336_1280.jpg',
                 // visibilityChanged: 'visibilityChanged03',
@@ -169,36 +173,6 @@ new Vue({
             }
         ]
     },
-})
-
-
-Vue.component('menu-component2',{
-    props:['title'],
-    data:function(){
-        return{
-        }
-
-    },
-
-    template:`
-<h1 v-on:scroll="$emit('text-show')" >{{title}} </h1>
-
-`
-
-    
-})
-new Vue({
-    el:'#app1111',
-    data:{
-        show:false
-    },
-    methods:{
-        visibilityChanged (show, entry) {
-            this.show = show
-            console.log(entry)
-    }
-}
-
 })
 
 
