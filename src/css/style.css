@@ -363,7 +363,10 @@ img {
     font-size: 2.5em;
     margin-top: 20px;
     text-align: center;
-    font-family: 'ヒラギノ明朝 ProN', 'Hiragino Mincho ProN', sans-serif; }
+    font-family: 'ヒラギノ明朝 ProN', 'Hiragino Mincho ProN', sans-serif;
+    display: none; }
+    .c-menu__item--active {
+      display: block; }
   .c-menu__link {
     color: white;
     padding: 10px; }

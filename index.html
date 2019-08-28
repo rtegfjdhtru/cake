@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="喫茶店のサンプルサイト">
+    <meta name="keyword" content="ケーキ,コーヒー,喫茶店">
     <title>ケーキのホームページ</title>
     <link href="src/css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap" rel="stylesheet">
@@ -26,12 +28,12 @@
     <!--メニューバー-->
     <nav class="nav-menu" :class="{'nav-menu--active':isActive}">
         <ul class="c-menu">
-            <li class="c-menu__item"><a class="c-menu__link" href="#">TOP</a></li>
-            <li class="c-menu__item"><a class="c-menu__link" href="#">NEWS</a></li>
-            <li class="c-menu__item"><a class="c-menu__link" href="#">MENU</a></li>
-            <li class="c-menu__item"><a class="c-menu__link" href="#">STAFF</a></li>
-            <li class="c-menu__item"><a class="c-menu__link" href="#">COURCE</a></li>
-            <li class="c-menu__item"><a class="c-menu__link" href="#">CONTACT</a></li>
+            <li class="c-menu__item" :class="{'c-menu__item--active':isActive}"><a class="c-menu__link" href="#">TOP</a></li>
+            <li class="c-menu__item" :class="{'c-menu__item--active':isActive}"><a class="c-menu__link" href="#">NEWS</a></li>
+            <li class="c-menu__item" :class="{'c-menu__item--active':isActive}"><a class="c-menu__link" href="#">MENU</a></li>
+            <li class="c-menu__item" :class="{'c-menu__item--active':isActive}"><a class="c-menu__link" href="#">STAFF</a></li>
+            <li class="c-menu__item" :class="{'c-menu__item--active':isActive}"><a class="c-menu__link" href="#">COURCE</a></li>
+            <li class="c-menu__item" :class="{'c-menu__item--active':isActive}"><a class="c-menu__link" href="#">CONTACT</a></li>
         </ul>
     </nav>
 </header>
@@ -46,7 +48,7 @@
     <!--第一セクション-->
     <div class="p-section__first">
         <section id="first" class="first c-container  u-section--padding">
-            <h2 class="u-text__first">チョコレートケーキの完成系</h2>
+            <h1 class="u-text__first">チョコレートケーキの完成系</h1>
             <span class="u-text__first--span">〜Perfect Chocolate cake〜</span>
             <p class="u-text__first--article u-margin">
                 ガーナ産のカカオをたっぷり使用した贅沢品<br/>

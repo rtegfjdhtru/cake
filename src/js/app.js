@@ -79,24 +79,24 @@ new Vue({
 })
 let windowSize = window.innerHeight;
 let menu = document.querySelector('.js-menu-height');
-    menu = menu.offsetTop - windowSize
+menu = menu.offsetTop - windowSize
 new Vue({
     el: '#second',
     data: {
         isVisible01: false,
         isVisible02: false,
-        show:false,
-        menu:menu,
-        'js-active':true,
-        scrollY:window.scrollY,
+        show: false,
+        menu: menu,
+        'js-active': true,
+        scrollY: window.scrollY,
     },
     methods: {
-        menuImgslide:function(){
+        menuImgslide: function () {
             console.log(scrollY)
             console.log('menuの値' + menu)
-            if( scrollY >  menu){
-                this.show= true
-            }else{
+            if (scrollY > menu) {
+                this.show = true
+            } else {
                 this.show = false
             }
 
