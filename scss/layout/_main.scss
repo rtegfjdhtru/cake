@@ -73,6 +73,7 @@
   transform: translateX(100%);
 }
 
+
 .menu--img-right-enter-active, .menu--img-right-leave-active {
   transition: all 1.5s ease;
   opacity: 1;
@@ -91,6 +92,16 @@
 .menu--text-left-enter, .menu--text-left-leave-active {
   opacity: 0;
   transform: translateX(-100%);
+}
+
+.menu--text-top-enter-active,.menu--text-top-leave-active{
+  transition: all 1.5s ease;
+  opacity: 1;
+}
+
+.menu--text-top-enter, .menu--text-top-leave-active {
+  opacity: 0;
+  transform: translateY(-100%);
 }
 
 

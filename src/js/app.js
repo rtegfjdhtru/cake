@@ -85,24 +85,24 @@ new Vue({
     data: {
         isVisible01: false,
         isVisible02: false,
+        isVisible03: false,
         show: false,
         menu: menu,
         'js-active': true,
         scrollY: window.scrollY,
     },
-    methods: {
-        menuImgslide: function () {
-            console.log(scrollY)
-            console.log('menuの値' + menu)
-            if (scrollY > menu) {
-                this.show = true
-            } else {
-                this.show = false
-            }
+     methods: {
+         visibilityChanged01(isVisible01, entry) {
+             this.isVisible01 = isVisible01
+         },
+         visibilityChanged02(isVisible02, entry) {
+             this.isVisible02 = isVisible02
+         },
+         visibilityChanged03(isVisible03, entry) {
+             this.isVisible03 = isVisible03
+         }
 
-        }
-    }
-
+     }
 
 })
 
@@ -112,12 +112,16 @@ Vue.component('menu-component', {
     data: function () {
         return {
             img: '',
+            show: true,
+            scrollY: window.scrollY,
         }
     },
+
+
     template: `
-     <div class="u-menu-padding-top" :class="menu.direction">
-     <transition name="menu--img--left">
-                <img :src=menu.img alt="メニューの写真" class="u-img-size--menu">
+     <div class="u-menu-padding-top"  :class="menu.direction">
+     <transition name="menu.anime">
+                <img :src=menu.img alt="メニューの写真" class="u-img-size--menu js-img" v-if="show">
                 </transition>
                 
                
@@ -134,6 +138,8 @@ Vue.component('menu-component', {
     `
 
 })
+
+
 new Vue({
     el: '#second2',
     data: {
@@ -141,6 +147,7 @@ new Vue({
             {
                 id: 1,
                 direction: 'c-container__menu--left',
+                anime:'menu--img--left',
                 img: 'img/cake-1850011_1280.jpg',
                 title: '超濃厚チョコレートケーキ',
                 sbTitle: 'Super rich chocolate cake',
@@ -170,9 +177,19 @@ new Vue({
                     'ジャマイカのブルーマウンテンで取れた厳選された豆を使用<br/>' +
                     '                        幸福なひとときをあなたに...',
                 money: '500'
-            }
-        ]
+            },
+
+
+        ],
+
     },
+
+
 })
 
+new Vue({
+    el:'#third',
+    data:{
+    }
 
+})

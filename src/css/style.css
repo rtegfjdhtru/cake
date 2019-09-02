@@ -159,6 +159,14 @@ img {
   opacity: 0;
   transform: translateX(-100%); }
 
+.menu--text-top-enter-active, .menu--text-top-leave-active {
+  transition: all 1.5s ease;
+  opacity: 1; }
+
+.menu--text-top-enter, .menu--text-top-leave-active {
+  opacity: 0;
+  transform: translateY(-100%); }
+
 .third {
   margin: 0 auto; }
 
